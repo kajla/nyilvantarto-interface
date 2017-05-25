@@ -27,15 +27,17 @@ public interface NyilvantartoService extends Remote {
 
     boolean aruModosit(aru ujAru) throws RemoteException;
 
-    boolean aruImport(Nyilvantarto nyilvantarto) throws RemoteException;
+    boolean aruImport(ArrayList<aru> aruk) throws RemoteException;
 
     boolean naploHozzaad(Naplo naplo) throws RemoteException;
 
-    ArrayList<Naplo> naploOlvasas(Nyilvantarto nyilvantarto) throws RemoteException;
+    ArrayList<Naplo> naploOlvasas() throws RemoteException;
 
     void naploTisztitas() throws RemoteException;
 
-    void felhasznaloOlvasas(Nyilvantarto nyilvantarto) throws RemoteException;
+    ArrayList<Felhasznalo> felhasznaloLista() throws RemoteException;
+
+    Felhasznalo aktFelhasznalo() throws RemoteException;
 
     boolean felhasznaloHozzaad(Felhasznalo ujFelhasznalo) throws RemoteException;
 
